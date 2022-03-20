@@ -1,4 +1,5 @@
 import React from "react";
+import ReactModal from "../ReactModal/ReactModal";
 
 const SingleProduct = (props) => {
   const { image, title } = props.product;
@@ -12,7 +13,7 @@ const SingleProduct = (props) => {
         <button className="btn btn-primary" onClick={cartCount}>
           Add To Cart
         </button>
-        <button>Details</button>
+        <ReactModal product={props.product}></ReactModal>
       </div>
     </div>
   );
