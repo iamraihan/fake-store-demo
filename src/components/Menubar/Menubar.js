@@ -1,7 +1,8 @@
 import React from "react";
 import "./Menubar.css";
 
-const Menubar = () => {
+const Menubar = (props) => {
+  // console.log(props);
   return (
     <div>
       <div className="container-fluid p-4 bg-light">
@@ -15,7 +16,9 @@ const Menubar = () => {
               <a href="/home">About</a>
             </li>
             <li>
-              <a href="/home">Cart</a>
+              <a href="/home">
+                Cart <sup>{props.count}</sup>
+              </a>
             </li>
             <li>
               <a href="/home">Others</a>
